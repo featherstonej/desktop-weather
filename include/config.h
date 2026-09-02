@@ -13,7 +13,7 @@
 
 // Firmware Details
 #define FW_NAME         "SmallTV Weather"
-#define FW_VERSION      "3.1.0"
+#define FW_VERSION      "3.2.0"
 #define AP_SSID         "SmallTV-Setup"
 
 // Color conversion helper functions
@@ -62,15 +62,17 @@ struct DeviceConfig {
     uint8_t feelsLikeSize = 1;  // 0=16px (Font 2), 1=19px (FreeSans 12pt), 2=26px (Font 4), 3=12px (FreeSans 9pt)
 
     // Customizable UI Theme Colors
-    String colCity     = "#FFB800";
-    String colBadgeBg  = "#39FF14";
-    String colBadgeTxt = "#000000";
-    String colHour     = "#FFFFFF";
-    String colMin      = "#FFDE00";
-    String colSec      = "#FFFFFF";
-    String colDate     = "#FFFFFF";
-    String colDay      = "#00E676";
-    String colTempBar  = "#3A86FF";
-    String colHumBar   = "#FFD166";
-    String colBg       = "#000000";
+    String colCity            = "#FFB800";
+    String colBadgeBg         = "#39FF14";
+    String colBadgeTxt        = "#000000";
+    String colFeelsLike       = "#AAAAAA";
+    String colHour            = "#FFFFFF";
+    String colMin             = "#FFDE00";
+    String colWeatherBadgeBg  = "#FFFFFF";
+    String colWeatherBadgeTxt = "#000000";
+    String colDate            = "#FFFFFF";
+    String colDay             = "#00E676";
+    String colTempBar         = "#3A86FF";
+    String colHumBar          = "#FFD166";
+    String colBg              = "#000000";
 };

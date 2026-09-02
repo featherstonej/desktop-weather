@@ -248,11 +248,11 @@ void handleRoot() {
     html += "<h3>🎨 UI Theme & Colors</h3>";
     html += "<p style='font-size:12px;color:#aaa;margin-top:0;'>Click a 1-click theme preset or customize individual elements:</p>";
     html += "<div>";
-    html += "<button type='button' class='btn-preset' onclick='applyPreset(\"#FFB800\",\"#39FF14\",\"#000000\",\"#FFFFFF\",\"#FFDE00\",\"#FFFFFF\",\"#FFFFFF\",\"#00E676\",\"#3A86FF\",\"#FFD166\",\"#000000\")'>🌟 Cyberpunk Gold</button>";
-    html += "<button type='button' class='btn-preset' onclick='applyPreset(\"#FF007F\",\"#8338EC\",\"#FFFFFF\",\"#00F0FF\",\"#FF007F\",\"#00F0FF\",\"#FFFFFF\",\"#FF007F\",\"#FF007F\",\"#00F0FF\",\"#000000\")'>🌆 Synthwave Neon</button>";
-    html += "<button type='button' class='btn-preset' onclick='applyPreset(\"#00FF66\",\"#00FF66\",\"#000000\",\"#00FF66\",\"#00FF66\",\"#00FF66\",\"#00FF66\",\"#00FF66\",\"#00FF66\",\"#00FF66\",\"#000000\")'>🟢 Matrix Green</button>";
-    html += "<button type='button' class='btn-preset' onclick='applyPreset(\"#00D2FF\",\"#3A86FF\",\"#FFFFFF\",\"#FFFFFF\",\"#00D2FF\",\"#00D2FF\",\"#FFFFFF\",\"#00D2FF\",\"#00D2FF\",\"#FFFFFF\",\"#0A0E1A\")'>❄️ Ice Glacier</button>";
-    html += "<button type='button' class='btn-preset' onclick='applyPreset(\"#FF7B00\",\"#FFB703\",\"#000000\",\"#FFFFFF\",\"#FFB703\",\"#FFFFFF\",\"#FFFFFF\",\"#FF7B00\",\"#FF7B00\",\"#FFB703\",\"#140800\")'>🌅 Sunset Amber</button>";
+    html += "<button type='button' class='btn-preset' onclick='applyPreset(\"#FFB800\",\"#39FF14\",\"#000000\",\"#AAAAAA\",\"#FFFFFF\",\"#FFDE00\",\"#FFFFFF\",\"#000000\",\"#FFFFFF\",\"#00E676\",\"#3A86FF\",\"#FFD166\",\"#000000\")'>🌟 Cyberpunk Gold</button>";
+    html += "<button type='button' class='btn-preset' onclick='applyPreset(\"#FF007F\",\"#8338EC\",\"#FFFFFF\",\"#00F0FF\",\"#00F0FF\",\"#FF007F\",\"#8338EC\",\"#FFFFFF\",\"#FFFFFF\",\"#FF007F\",\"#FF007F\",\"#00F0FF\",\"#000000\")'>🌆 Synthwave Neon</button>";
+    html += "<button type='button' class='btn-preset' onclick='applyPreset(\"#00FF66\",\"#00FF66\",\"#000000\",\"#00FF66\",\"#00FF66\",\"#00FF66\",\"#00FF66\",\"#000000\",\"#00FF66\",\"#00FF66\",\"#00FF66\",\"#00FF66\",\"#000000\")'>🟢 Matrix Green</button>";
+    html += "<button type='button' class='btn-preset' onclick='applyPreset(\"#00D2FF\",\"#3A86FF\",\"#FFFFFF\",\"#B0E0E6\",\"#FFFFFF\",\"#00D2FF\",\"#3A86FF\",\"#FFFFFF\",\"#FFFFFF\",\"#00D2FF\",\"#00D2FF\",\"#FFFFFF\",\"#0A0E1A\")'>❄️ Ice Glacier</button>";
+    html += "<button type='button' class='btn-preset' onclick='applyPreset(\"#FF7B00\",\"#FFB703\",\"#000000\",\"#FFAA33\",\"#FFFFFF\",\"#FFB703\",\"#FFB703\",\"#000000\",\"#FFFFFF\",\"#FF7B00\",\"#FF7B00\",\"#FFB703\",\"#140800\")'>🌅 Sunset Amber</button>";
     html += "</div>";
     html += "<br>";
 
@@ -260,9 +260,11 @@ void handleRoot() {
     html += "<div class='color-row'><span class='color-label'>City Name:</span><input type='color' id='colCity' name='colCity' value='" + config.colCity + "'></div>";
     html += "<div class='color-row'><span class='color-label'>Country Badge Background:</span><input type='color' id='colBadgeBg' name='colBadgeBg' value='" + config.colBadgeBg + "'></div>";
     html += "<div class='color-row'><span class='color-label'>Country Badge Text:</span><input type='color' id='colBadgeTxt' name='colBadgeTxt' value='" + config.colBadgeTxt + "'></div>";
+    html += "<div class='color-row'><span class='color-label'>Feels Like Text:</span><input type='color' id='colFeelsLike' name='colFeelsLike' value='" + config.colFeelsLike + "'></div>";
     html += "<div class='color-row'><span class='color-label'>Hours Digits:</span><input type='color' id='colHour' name='colHour' value='" + config.colHour + "'></div>";
     html += "<div class='color-row'><span class='color-label'>Minutes Digits:</span><input type='color' id='colMin' name='colMin' value='" + config.colMin + "'></div>";
-    html += "<div class='color-row'><span class='color-label'>Seconds Digits:</span><input type='color' id='colSec' name='colSec' value='" + config.colSec + "'></div>";
+    html += "<div class='color-row'><span class='color-label'>Weather Badge Background:</span><input type='color' id='colWeatherBadgeBg' name='colWeatherBadgeBg' value='" + config.colWeatherBadgeBg + "'></div>";
+    html += "<div class='color-row'><span class='color-label'>Weather Badge Text:</span><input type='color' id='colWeatherBadgeTxt' name='colWeatherBadgeTxt' value='" + config.colWeatherBadgeTxt + "'></div>";
     html += "<div class='color-row'><span class='color-label'>Date Text:</span><input type='color' id='colDate' name='colDate' value='" + config.colDate + "'></div>";
     html += "<div class='color-row'><span class='color-label'>Day of Week:</span><input type='color' id='colDay' name='colDay' value='" + config.colDay + "'></div>";
     html += "<div class='color-row'><span class='color-label'>Temperature Gauge & Icon:</span><input type='color' id='colTempBar' name='colTempBar' value='" + config.colTempBar + "'></div>";
@@ -393,13 +395,15 @@ void handleRoot() {
 
     // JavaScript for Theme Presets & Geocoding
     html += "<script>";
-    html += "function applyPreset(city, bBg, bTxt, hr, min, sec, date, day, tBar, hBar, bg){";
+    html += "function applyPreset(city, bBg, bTxt, feels, hr, min, wBg, wTxt, date, day, tBar, hBar, bg){";
     html += "  document.getElementById('colCity').value = city;";
     html += "  document.getElementById('colBadgeBg').value = bBg;";
     html += "  document.getElementById('colBadgeTxt').value = bTxt;";
+    html += "  document.getElementById('colFeelsLike').value = feels;";
     html += "  document.getElementById('colHour').value = hr;";
     html += "  document.getElementById('colMin').value = min;";
-    html += "  document.getElementById('colSec').value = sec;";
+    html += "  document.getElementById('colWeatherBadgeBg').value = wBg;";
+    html += "  document.getElementById('colWeatherBadgeTxt').value = wTxt;";
     html += "  document.getElementById('colDate').value = date;";
     html += "  document.getElementById('colDay').value = day;";
     html += "  document.getElementById('colTempBar').value = tBar;";
@@ -450,9 +454,11 @@ void handleSaveSettings() {
     if (server.hasArg("colCity")) config.colCity = server.arg("colCity");
     if (server.hasArg("colBadgeBg")) config.colBadgeBg = server.arg("colBadgeBg");
     if (server.hasArg("colBadgeTxt")) config.colBadgeTxt = server.arg("colBadgeTxt");
+    if (server.hasArg("colFeelsLike")) config.colFeelsLike = server.arg("colFeelsLike");
     if (server.hasArg("colHour")) config.colHour = server.arg("colHour");
     if (server.hasArg("colMin")) config.colMin = server.arg("colMin");
-    if (server.hasArg("colSec")) config.colSec = server.arg("colSec");
+    if (server.hasArg("colWeatherBadgeBg")) config.colWeatherBadgeBg = server.arg("colWeatherBadgeBg");
+    if (server.hasArg("colWeatherBadgeTxt")) config.colWeatherBadgeTxt = server.arg("colWeatherBadgeTxt");
     if (server.hasArg("colDate")) config.colDate = server.arg("colDate");
     if (server.hasArg("colDay")) config.colDay = server.arg("colDay");
     if (server.hasArg("colTempBar")) config.colTempBar = server.arg("colTempBar");

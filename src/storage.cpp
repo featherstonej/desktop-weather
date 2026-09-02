@@ -60,9 +60,11 @@ bool Storage::loadConfig(DeviceConfig &config) {
     if (doc["colCity"].is<const char*>()) config.colCity = doc["colCity"].as<String>();
     if (doc["colBadgeBg"].is<const char*>()) config.colBadgeBg = doc["colBadgeBg"].as<String>();
     if (doc["colBadgeTxt"].is<const char*>()) config.colBadgeTxt = doc["colBadgeTxt"].as<String>();
+    if (doc["colFeelsLike"].is<const char*>()) config.colFeelsLike = doc["colFeelsLike"].as<String>();
     if (doc["colHour"].is<const char*>()) config.colHour = doc["colHour"].as<String>();
     if (doc["colMin"].is<const char*>()) config.colMin = doc["colMin"].as<String>();
-    if (doc["colSec"].is<const char*>()) config.colSec = doc["colSec"].as<String>();
+    if (doc["colWeatherBadgeBg"].is<const char*>()) config.colWeatherBadgeBg = doc["colWeatherBadgeBg"].as<String>();
+    if (doc["colWeatherBadgeTxt"].is<const char*>()) config.colWeatherBadgeTxt = doc["colWeatherBadgeTxt"].as<String>();
     if (doc["colDate"].is<const char*>()) config.colDate = doc["colDate"].as<String>();
     if (doc["colDay"].is<const char*>()) config.colDay = doc["colDay"].as<String>();
     if (doc["colTempBar"].is<const char*>()) config.colTempBar = doc["colTempBar"].as<String>();
@@ -106,9 +108,11 @@ bool Storage::saveConfig(const DeviceConfig &config) {
     doc["colCity"] = config.colCity;
     doc["colBadgeBg"] = config.colBadgeBg;
     doc["colBadgeTxt"] = config.colBadgeTxt;
+    doc["colFeelsLike"] = config.colFeelsLike;
     doc["colHour"] = config.colHour;
     doc["colMin"] = config.colMin;
-    doc["colSec"] = config.colSec;
+    doc["colWeatherBadgeBg"] = config.colWeatherBadgeBg;
+    doc["colWeatherBadgeTxt"] = config.colWeatherBadgeTxt;
     doc["colDate"] = config.colDate;
     doc["colDay"] = config.colDay;
     doc["colTempBar"] = config.colTempBar;

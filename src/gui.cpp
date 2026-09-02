@@ -366,15 +366,18 @@ void GUI::drawScreen(ScreenState screen, const DeviceConfig &config, const Weath
 
 void GUI::drawMainScreen(const DeviceConfig &config, const WeatherData &weather) {
     uint16_t cBg       = hexToRGB565(config.colBg);
-    uint16_t cCity     = hexToRGB565(config.colCity);
-    uint16_t cBadgeBg  = hexToRGB565(config.colBadgeBg);
-    uint16_t cBadgeTxt = hexToRGB565(config.colBadgeTxt);
-    uint16_t cHour     = hexToRGB565(config.colHour);
-    uint16_t cMin      = hexToRGB565(config.colMin);
-    uint16_t cDate     = hexToRGB565(config.colDate);
-    uint16_t cDay      = hexToRGB565(config.colDay);
-    uint16_t cTempBar  = hexToRGB565(config.colTempBar);
-    uint16_t cHumBar   = hexToRGB565(config.colHumBar);
+    uint16_t cCity            = hexToRGB565(config.colCity);
+    uint16_t cBadgeBg         = hexToRGB565(config.colBadgeBg);
+    uint16_t cBadgeTxt        = hexToRGB565(config.colBadgeTxt);
+    uint16_t cFeelsLike       = hexToRGB565(config.colFeelsLike);
+    uint16_t cHour            = hexToRGB565(config.colHour);
+    uint16_t cMin             = hexToRGB565(config.colMin);
+    uint16_t cWeatherBadgeBg  = hexToRGB565(config.colWeatherBadgeBg);
+    uint16_t cWeatherBadgeTxt = hexToRGB565(config.colWeatherBadgeTxt);
+    uint16_t cDate            = hexToRGB565(config.colDate);
+    uint16_t cDay             = hexToRGB565(config.colDay);
+    uint16_t cTempBar         = hexToRGB565(config.colTempBar);
+    uint16_t cHumBar          = hexToRGB565(config.colHumBar);
 
     // 1. Clean Top Banner: City Name & Country Badge ONLY
     uint8_t cityFont = (config.labelSize == 1) ? 2 : 4;
@@ -404,7 +407,7 @@ void GUI::drawMainScreen(const DeviceConfig &config, const WeatherData &weather)
     }
 
     tft->setTextDatum(TL_DATUM);
-    tft->setTextColor(TFT_LIGHTGREY, cBg);
+    tft->setTextColor(cFeelsLike, cBg);
 
     if (config.feelsLikeSize == 1) {
         // ✨ In-Between (~19px FreeSans 12pt)
@@ -509,9 +512,9 @@ void GUI::drawMainScreen(const DeviceConfig &config, const WeatherData &weather)
     // Condition Text Badge (Shifted Down below the Orb)
     String cond = weather.valid ? weather.conditionText : "Clear";
     if (cond.length() > 7) cond = cond.substring(0, 7);
-    tft->fillRoundRect(164, 92, 62, 20, 4, TFT_WHITE);
+    tft->fillRoundRect(164, 92, 62, 20, 4, cWeatherBadgeBg);
     tft->setTextDatum(MC_DATUM);
-    tft->setTextColor(0x000F, TFT_WHITE);
+    tft->setTextColor(cWeatherBadgeTxt, cWeatherBadgeBg);
     tft->drawString(cond, 195, 102, 2);
 
     // 4. Date & Day Section (Matching Feels Like font size)
