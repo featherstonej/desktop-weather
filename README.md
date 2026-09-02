@@ -36,7 +36,7 @@ Custom open-source firmware for the **GeekMagic SmallTV-Ultra** (ESP8266 / ESP-1
 │  Feels like 12°C                      ( ~19px In-Between )  │  <-- Sub-header
 │                                                             │
 │                                            ┌─────────────┐  │
-│   17 : 39                                  │   ( ☀️ )    │  │  <-- Clock (No Seconds)
+│   17 : 39                                  │   ( ☀️ )     │  │  <-- Clock (No Seconds)
 │   (Large Clock)                            │  [ Clear ]  │  │  <-- Weather Orb & Badge
 │                                            └─────────────┘  │
 │                                                             │
