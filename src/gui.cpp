@@ -455,7 +455,9 @@ void GUI::drawMainScreen(const DeviceConfig &config, const WeatherData &weather)
         }
 
         const char *days[] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-        sprintf(dayStr, "%s", days[timeinfo->tm_wday]);
+        if (timeinfo->tm_wday >= 0 && timeinfo->tm_wday < 7) {
+            snprintf(dayStr, sizeof(dayStr), "%s", days[timeinfo->tm_wday]);
+        }
     }
 
     uint8_t selectedFont = 7;
@@ -518,6 +520,7 @@ void GUI::drawMainScreen(const DeviceConfig &config, const WeatherData &weather)
     tft->drawString(cond, 195, 102, 2);
 
     // 4. Date & Day Section (Matching Feels Like font size)
+    tft->fillRect(145, 118, 95, 30, cBg);
     tft->setTextDatum(TL_DATUM);
 
     if (config.feelsLikeSize == 1) {
